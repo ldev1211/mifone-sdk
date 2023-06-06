@@ -1,4 +1,4 @@
-package vn.mitek.midule;
+package vn.mitek.mifone_sdk;
 
 import org.junit.Test;
 
