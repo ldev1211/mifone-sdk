@@ -5,15 +5,16 @@ import android.content.Context;
 import com.example.mifonelibproj.core.FactoryMifone;
 import com.example.mifonelibproj.model.other.RegistrationState;
 import com.example.mifonelibproj.model.other.State;
-import com.example.mifonelibproj.model.other.User;
 
 import vn.mitek.mifone_sdk.listener.MifoneCoreListener;
 import vn.mitek.mifone_sdk.model.ConfigMifoneCore;
+import vn.mitek.mifone_sdk.model.User;
 
 public class Factory {
 
     public static void createMifoneCore(Context context, ConfigMifoneCore configMifoneCore, User user){
-        FactoryMifone.createMifoneCore(context,configMifoneCore.getConfigMifoneCore(),user);
+        com.example.mifonelibproj.model.other.User user1 = new com.example.mifonelibproj.model.other.User(user.getUsername(),user.getPassword(),user.getType());
+        FactoryMifone.createMifoneCore(context,configMifoneCore.getConfigMifoneCore(),user1);
     }
 
     public static void registerListener(MifoneCoreListener mifoneCoreListener){
